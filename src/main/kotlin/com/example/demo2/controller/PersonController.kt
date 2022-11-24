@@ -20,7 +20,7 @@ class PersonController {
 
     @Autowired
     private lateinit var  service:PersonServices
-    /*
+
     @GetMapping(value = ["/{id}"],
             produces = [MediaType.APPLICATION_JSON_VALUE])
     fun findId(@PathVariable(value = "id") id:Long) : PersonVo {
@@ -47,7 +47,7 @@ class PersonController {
     fun delete(@PathVariable(value = "id") id:Long):ResponseEntity<*>{
         service.delete(id)
         return ResponseEntity.noContent().build<Any>()
-    }*/
+    }
 
 
 
