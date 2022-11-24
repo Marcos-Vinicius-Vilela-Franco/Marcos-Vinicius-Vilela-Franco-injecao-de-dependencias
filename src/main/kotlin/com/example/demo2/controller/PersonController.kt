@@ -1,7 +1,6 @@
 package com.example.demo2.controller
 
-
-import com.example.demo2.model.Person
+import com.example.demo2.data.vo.v1.PersonVo
 import com.example.demo2.services.PersonServices
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
@@ -21,25 +20,26 @@ class PersonController {
 
     @Autowired
     private lateinit var  service:PersonServices
+    /*
     @GetMapping(value = ["/{id}"],
             produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun findId(@PathVariable(value = "id") id:Long) : Person{
+    fun findId(@PathVariable(value = "id") id:Long) : PersonVo {
         return service.findById(id)
     }
     @GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun findAll():List<Person>{
+    fun findAll():List<PersonVo>{
         return  service.findAll()
     }
 
     @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE],
         produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun create(@RequestBody person: Person):Person{
-        return  service.create(person)
+    fun create(@RequestBody PersonVo: PersonVo):PersonVo{
+        return  service.create(PersonVo)
     }
     @PutMapping(consumes = [MediaType.APPLICATION_JSON_VALUE],
         produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun update(@RequestBody person: Person):Person{
-        return  service.update(person)
+    fun update(@RequestBody PersonVo: PersonVo):PersonVo{
+        return  service.update(PersonVo)
     }
 
     @DeleteMapping(value = ["/{id}"],
@@ -47,7 +47,7 @@ class PersonController {
     fun delete(@PathVariable(value = "id") id:Long):ResponseEntity<*>{
         service.delete(id)
         return ResponseEntity.noContent().build<Any>()
-    }
+    }*/
 
 
 
